@@ -8,7 +8,11 @@
   <meta http-equiv="Refresh" content="1">
 </head>
 <body>
-  <h1 class="title">Wildlife Encounter</h1>
+  <div style="position: relative">
+    <img src="{{ url_for('static',filename='assets/compass.png') }}" 
+         style="position: absolute; z-index: -1; margin-left: 32px; height: 3cm" />
+    <h1 class="title">Wildlife Encounter</h1>
+  </div>
   <div class="box-container">
     {% for prop in wildlife_state.get_all_box_prop() %}
     <div
