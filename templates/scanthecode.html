@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/styles.css') }}"
+  />
+</head>
+<body>
+  <h1 class="title">Scan The Code</h1>
+  <div class="box-container">
+    {% for prop in scanthecode_state.get_all_box_prop() %}
+    <div style="height: 100%">
+      <div class="text-box" >
+        <p>{{prop.text}}</p>
+      </div>
+      <div class="box" style="background-color: {{prop.color}}"></div>
+    </div>
+    {% endfor %}
+  </div>
+</body>

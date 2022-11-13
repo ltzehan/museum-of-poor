@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/styles.css') }}"
+  />
+</head>
+<body>
+  <h1 class="title">Wildlife Encounter</h1>
+  <div class="box-container">
+    {% for prop in wildlife_state.get_all_box_prop() %}
+    <div
+      class="box"
+      style="background-color: {{prop.color}}; margin-top: {{prop.margin_top}};"
+    >
+      <p>{{prop.text}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</body>
