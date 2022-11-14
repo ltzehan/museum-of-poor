@@ -12,4 +12,9 @@
     <a href="/wildlife">Wildlife Encounter</a>
     <a href="/scanthecode">Scan the Code</a>
   </div>
+  <marquee behavior="scroll" direction="left" scrollamount="15" style="margin-top: 48px">
+    {% for fname in poor %}
+    <img src="{{ url_for('static',filename='assets/poor/' + fname) }}" style="height: 5cm" />
+    {% endfor %}
+  </marquee>
 </body>

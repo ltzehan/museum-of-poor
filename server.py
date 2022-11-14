@@ -1,3 +1,4 @@
+import os
 import threading
 
 from flask import Flask, render_template
@@ -39,7 +40,8 @@ def update_wildlife_state(req: Wildlife):
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    poor = os.listdir(os.path.join(app.static_folder, "assets", "poor"))
+    return render_template("index.html", poor=poor)
 
 
 @app.route("/wildlife")
