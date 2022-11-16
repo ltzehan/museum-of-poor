@@ -54,16 +54,13 @@ p {
 }
 
 .box {
+    display: flex;
     height: 3cm;
     width: 3cm;
     border: 2px solid black;
-}
-
-.box>p {
-    height: 100%;
-    width: 100%;
-    text-align: center;
     font-size: 18px;
+    justify-content: center;
+    align-items: center;
 }
 
 .box-container {
